@@ -1,20 +1,31 @@
 <template>
   <header>
       <h1>
-          {{title}}
+          <h1 v-on:click="changeTitle">{{title}}</h1>
       </h1>
   </header>
 </template>
 
 <script>
 
-
+import { bus } from '../main';
 export default {
+    
+    prop: {
+        title: {
+            type: String
+        }
+    },
   
   data(){
     return {
         title: 'Vue Ninjas'
     }
+  },
+  methods: {
+      changeTitle(){
+          this.$emit('ChangeTitle','Vue Wizards');
+      }
   }
   
 }

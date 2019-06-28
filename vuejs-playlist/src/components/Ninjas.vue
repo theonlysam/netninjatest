@@ -25,7 +25,28 @@ export default {
          
     }
     
+  },
+  //lifecycle hooks
+  beforeCreate(){
+      alert('Before Create');
+
+  },
+  created(){
+      alert('created');
+  },
+  beforeMount(){
+      alert('beforeMount');
+  },
+  mounted(){
+      alert('mounted');
+  },
+  beforeupdate(){
+      alert('before update');
+  },
+  updated(){
+      alert('updated')
   }
+
   
 }
 </script>
